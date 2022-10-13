@@ -1,0 +1,136 @@
+@import 'variable.scss';
+@import 'header';
+@import 'breadrcrumb';
+@import url('https://fonts.bunny.net/css?family=abeezee:400');
+@import 'footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+:root {
+  font-size: 1rem;
+}
+
+body {
+  margin: 0 auto;
+  color: var(--main-grey);
+}
+
+header {
+  max-width: calc(0.7 * 100vw);
+  margin: 0 auto;
+  padding: 2rem 2rem 0 2rem;
+}
+
+main {
+  min-height: 70vh;
+  max-width: calc(0.7 * 100vw);
+  margin: 0 auto;
+}
+
+
+.header--top {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header--ul {
+  display: flex;
+  list-style: none;
+  &--li {
+    padding: 0.3rem 1.2rem;
+    font-size: 1.2rem;
+  }
+  align-items: center;
+  &--website{
+    justify-content: center;
+  }
+}
+
+.header--li--website {
+  width: calc(80vw / 6);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:var(--main-brown);
+  padding:  0 0.5rem;
+  & a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    display: block;
+    padding: 1.5rem 0.5rem;
+  }
+  &:nth-of-type(even) {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+  }
+  &:first-of-type {
+    border-top-left-radius: 8px;
+  }
+  &:last-of-type {
+    border-top-right-radius: 8px;
+    background: var(--main-grey);
+  }
+  &:hover {
+    filter:brightness(1.7);
+    font-weight: 500;
+  }
+}
+
+.header--bottom {
+  margin: 0 auto;
+}
+
+.header--search {
+  min-width: 200px;
+  height: 2.5rem;
+  font-size: 1.3rem;
+  padding: 0 0.5rem;
+  border: 1px solid var(--main-brown);
+  border-radius: 3px;
+  &:focus {
+    outline: #777;
+    border: 2px solid #777;
+    box-shadow: 5px 5px 5px 5px #777;
+  }
+}
+
+.header--search-wrap::after{
+  content: "\f002";
+  font: normal normal normal 14px/1 FontAwesome;
+  position: relative;
+  right: 10%;
+
+}
+
+.header--logo--mi {
+  font-size: 2.7rem;
+  font-weight: 600;
+  &om {
+    color: var(--main-brown);
+  }
+}
+
+.header--logo {
+  font-size: 0;
+}
+
+#account::before {
+  content: "\f007 ";
+  font: normal normal normal 28px/1 FontAwesome;
+  margin-right: 0.7rem;
+}
+
+#basket::before {
+  content: "\f07a";
+  font: normal normal normal 28px/1 FontAwesome;
+  margin-right: 0.7rem;
+}
+
